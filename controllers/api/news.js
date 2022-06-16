@@ -11,6 +11,5 @@ async function getNews(req, res) {
     const response = await axios.get (
         'https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=technology,blockchain&apikey=WR5E6F1M35Y55WNY'
     ) 
-    const result = await response.json()
-    res.json(result)
+    res.json(response)
 }
