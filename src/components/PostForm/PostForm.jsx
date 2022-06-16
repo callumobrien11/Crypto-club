@@ -18,6 +18,8 @@ export default class PostForm extends Component {
   };
 
   handleSubmit = async (evt) => {
+
+
     evt.preventDefault();
     try {
       // 1. POST our new user info to the server
@@ -39,6 +41,7 @@ export default class PostForm extends Component {
       console.log("SignupForm error", err);
       this.setState({ error: "Sign Up Failed - Try Again" });
     }
+    this.props.navigate("/", { replace: true });
   };
 
   render() {
