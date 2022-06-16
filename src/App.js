@@ -2,11 +2,12 @@ import "./App.css";
 import React, { Component } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
+import HubPage from "./pages/HubPage/HubPage";
 import NewsPage from "./pages/NewsPage/NewsPage";
 import RatesPage from "./pages/RatesPage/RatesPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import AuthPage from "./pages/AuthPage/AuthPage";
+import PostFormPage from "./pages/PostFormPage/PostFormPage";
 
 class App extends Component {
   state = {
@@ -36,10 +37,11 @@ class App extends Component {
         <Navbar setUserInState={this.setUserInState}/>
         {this.state.user ? (
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HubPage />} />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/rates" element={<RatesPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            <Route path="/post/new" element={<PostFormPage />} />
           </Routes>
         ) : (
           <AuthPage setUserInState={this.setUserInState} />

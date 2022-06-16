@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router();
-const newsCtrl = require('../../src/news');
+const newsCtrl = require('../../controllers/api/news')
 
 
-router.get('/:tickers', newsCtrl.getNews)
+router.get('/', newsCtrl.getNews)
 
 
 module.exports = router;

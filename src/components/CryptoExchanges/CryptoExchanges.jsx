@@ -1,39 +1,61 @@
 import { Component } from "react";
-import Table from "react-bootstrap/Table"
+import Table from "react-bootstrap/Table";
+import Spinner from "react-bootstrap/Spinner";
+import "./CryptoExchanges.css"
+
 
 export default class CryptoExchange extends Component {
+  state = {
+    data: []
+  };
+
+  getExchanges = async () => {
+    await fetch("/api/exchanges")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        this.setState({ data: data });
+      });
+  };
+
+  componentDidMount() {
+    this.getExchanges();
+  }
+
   render() {
     return (
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Exchange Score</th>
-            <th>Volume</th>
-            <th>Avg.Liquidity</th>
-            <th>Weekly Visits</th>
-            <th># Markets</th>
-            <th># Coins</th>
-            <th>Fiat Supported</th>
-            <th>Volume Graph</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Test Coin</td>
-            <td>9.8</td>
-            <td>$70000</td>
-            <td>455</td>
-            <td>33,555,433</td>
-            <td>1243</td>
-            <td>54</td>
-            <td>USD, CAD</td>
-            <td>Graph /\/\/\/\</td>
-          </tr>
-        </tbody>
-      </Table>
+      <main className="exchangeTable">
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Btc Price</th>
+              <th># of Markets</th>
+              <th>Volume (24h)</th>
+            </tr>
+          </thead>
+          {this.state.data.length ? (
+            this.state.data.map((exchange) => (
+              <tbody>
+                <tr>
+                  <td>{exchange.rank}</td>
+                  <td><img className="image" src={exchange.iconUrl}></img>{exchange.name}</td>
+                  <td>{exchange.price}</td>
+                  <td>{exchange.btcPrice}</td>
+                  <td>{exchange.numberOfMarkets}</td>
+                  <td>{exchange["24hVolume"]}</td>
+                </tr>
+              </tbody>
+            ))
+          ) : (
+            <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+          )}
+        </Table>
+      </main>
     );
   }
 }

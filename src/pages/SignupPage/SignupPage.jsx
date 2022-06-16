@@ -1,5 +1,10 @@
+import PostForm from "../../components/PostForm/PostForm"
+
 export default function() {
     return (
-        <h1>Signup</h1>
+        <div>
+            <h1>Signup</h1>
+            <PostForm />
+        </div>
     )
 }

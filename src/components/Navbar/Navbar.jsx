@@ -17,6 +17,7 @@ class Navbar extends Component {
           <li><Link to="/" className="nav-links">Hub</Link></li>
           <li><Link to="/news"  className="nav-links">News</Link></li>
           <li><Link to="/rates" className="nav-links">Exchange Rates</Link></li>
+          <li><Link to="/post/new" className="nav-links">Create Post</Link></li>
         </ul>
         <button className="btn-signup" onClick={this.handleLogout}>Log Out</button>
       </nav>

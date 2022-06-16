@@ -11,7 +11,6 @@ module.exports = {
 }
 
 async function signup(req, res) {
-    console.log(req.body)
     try {
       const hashedPassword = await bcrypt.hash(req.body.password, SALT_ROUNDS)
       const user = await User.create({username: req.body.username, email:req.body.email, password:hashedPassword,});
