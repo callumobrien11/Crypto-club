@@ -24,6 +24,8 @@ express
 [Deployed app here](https://crypto-club-project4.herokuapp.com) 
 
 ICEBOX: {
+Sort posts by catagory
+sort news by catagory
 add a feature to exchange crypto through the site
 }
 
