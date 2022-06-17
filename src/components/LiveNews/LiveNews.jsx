@@ -26,7 +26,9 @@ export default class LiveNews extends Component {
   render() {
     return (
       <main className="LiveNews">
-        <h4>All The Top Stories</h4>
+        <div>
+          <h2 style={{color:"white", backgroundColor:"red"}}>BREAKING NEWS: CRYPTO CREASHES AND BURNS - BUY THE DIP!</h2>
+        </div>
         <Row xs={1} md={2} className="g-4 newsCards">
         {this.state.news.feed.length ? (
           this.state.news.feed.map((article) => (
