@@ -6,7 +6,7 @@ var postSchema = new Schema(
     title: { type: String, required: true },
     content: { type: String, required: true },
     catgory: String,
-    ceatedBy: { type: Schema.Types.ObjectId, ref: "User" },
+    createdBy: { type: Schema.Types.ObjectId, ref: "User" },
     date: { type: Date },
   },
   {

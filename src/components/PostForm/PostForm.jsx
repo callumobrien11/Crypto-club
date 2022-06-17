@@ -2,6 +2,7 @@ import { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import "./PostForm.css"
 
 export default class PostForm extends Component {
   state = {
@@ -22,10 +23,12 @@ export default class PostForm extends Component {
 
     evt.preventDefault();
     try {
+      let jwt = localStorage.getItem('token')
+     
       // 1. POST our new user info to the server
       const fetchResponse = await fetch("/api/post/new", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
         body: JSON.stringify({
           title: this.state.title,
           content: this.state.content,
@@ -47,7 +50,7 @@ export default class PostForm extends Component {
   render() {
     return (
       <Container>
-        <h1>Post to the hub</h1>
+        <h4>Write to the Crypto Club </h4>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>Title</Form.Label>
@@ -61,9 +64,10 @@ export default class PostForm extends Component {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Type message here</Form.Label>
+            <Form.Label>Message</Form.Label>
             <Form.Control
               as="textarea"
+              placeholder="Type message here"
               rows={4}
               name="content"
               value={this.state.content}
@@ -84,7 +88,7 @@ export default class PostForm extends Component {
             <option value="Elon Musk">Elon Musk</option>
           </Form.Select>
 
-          <Button variant="primary" type="submit">
+          <Button style={{backgroundColor:"#bf456d", border:"#bf456d", marginTop:"20px"}} type="submit">
             Post to the hub!
           </Button>
         </Form>

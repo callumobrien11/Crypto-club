@@ -92,7 +92,7 @@ export default class SignUpForm extends Component {
                 required
               />
             </Form.Group>
-            <Button type="submit" disabled={disable}>
+            <Button style={{backgroundColor:"#bf456d", border:"#bf456d"}} type="submit" disabled={disable}>
               SIGN UP
             </Button>
             <p className="error-message">&nbsp;{this.state.error}</p>

@@ -5,6 +5,7 @@ const logger = require('morgan')
 
 require('dotenv').config()
 
+
 require('./config/database')
 
 const app = express()
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'))
+app.use(require('./config/auth'));
 app.use('/api/post', require('./routes/api/post'))
 app.use('/api/news', require('./routes/api/news'))
 app.use('/api/exchanges', require('./routes/api/exchanges'))

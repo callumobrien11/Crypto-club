@@ -1,1 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    background-color: #99e2ff;
+}
+
+.btn-form {
+    color: red;
+}

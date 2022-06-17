@@ -12,14 +12,16 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="NavbarItems">
-        <h1 className="navbar-logo"><Link to="/">Crypto Club</Link></h1>
+      <h2 className="logo">Cryto Club</h2>
+        {/* <h4 className="navbar-logo title">Crypto Club</h4> */}
         <ul className="nav-menu">
           <li><Link to="/" className="nav-links">Hub</Link></li>
           <li><Link to="/news"  className="nav-links">News</Link></li>
           <li><Link to="/rates" className="nav-links">Exchange Rates</Link></li>
           <li><Link to="/post/new" className="nav-links">Create Post</Link></li>
+          <li><Link to="/" className="btn-signup" onClick={this.handleLogout}>Log Out</Link></li>
         </ul>
-        <button className="btn-signup" onClick={this.handleLogout}>Log Out</button>
+        
       </nav>
     );
   }

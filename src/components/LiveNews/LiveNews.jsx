@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
 import  Row  from "react-bootstrap/Row";
+import "./LiveNews.css"
 
 export default class LiveNews extends Component {
   state = {
@@ -25,8 +26,8 @@ export default class LiveNews extends Component {
   render() {
     return (
       <main className="LiveNews">
-        Crypto News
-        <Row xs={1} md={2} className="g-4">
+        <h4>All The Top Stories</h4>
+        <Row xs={1} md={2} className="g-4 newsCards">
         {this.state.news.feed.length ? (
           this.state.news.feed.map((article) => (
             <Card style={{ width: "30rem" }}>
@@ -41,9 +42,7 @@ export default class LiveNews extends Component {
             </Card>
           ))
         ) : (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
+          <Spinner className="spinner" animation="grow" variant="warning" />
         )}
         </Row>
       </main>

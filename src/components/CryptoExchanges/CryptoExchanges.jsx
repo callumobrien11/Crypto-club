@@ -50,9 +50,7 @@ export default class CryptoExchange extends Component {
               </tbody>
             ))
           ) : (
-            <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
+            <Spinner className="spinner" animation="grow" variant="warning" />
           )}
         </Table>
       </main>

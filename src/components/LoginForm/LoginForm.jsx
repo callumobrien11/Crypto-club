@@ -71,7 +71,7 @@ export default class SignUpForm extends Component {
                 required
               />
             </Form.Group>
-            <Button type="submit" variant="primary">
+            <Button  style={{backgroundColor:"#bf456d", border:"#bf456d"}} type="submit" variant="primary">
               LOGIN
             </Button>
           </Form>
