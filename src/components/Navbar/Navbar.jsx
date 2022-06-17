@@ -12,7 +12,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="NavbarItems">
-      <h2 className="logo">Cryto Club</h2>
+      <h2 className="logo">Cry-pto Club</h2>
         {/* <h4 className="navbar-logo title">Crypto Club</h4> */}
         <ul className="nav-menu">
           <li><Link to="/" className="nav-links">Hub</Link></li>
