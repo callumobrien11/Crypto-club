@@ -1,9 +1,9 @@
-# Crypto Club
+## Crypto Club
 
-## About the App 
-Crypto news app
-Show the top cryptocurrency spot exchange
-Has a hub for the community to share ideas/thoughts or to rant
+# About the App 
+1. Crypto news app
+2. Show the top cryptocurrency spot exchange
+3. Has a hub for the community to share ideas/thoughts or to rant
 
 The app:
 
