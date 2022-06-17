@@ -50,7 +50,7 @@ export default class PostForm extends Component {
   render() {
     return (
       <Container>
-        <h4>Write to the Crypto Club </h4>
+        <h4>Write to the Cry-pto Club </h4>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>Title</Form.Label>
@@ -88,7 +88,7 @@ export default class PostForm extends Component {
             <option value="Elon Musk">Elon Musk</option>
           </Form.Select>
 
-          <Button style={{backgroundColor:"#bf456d", border:"#bf456d", marginTop:"20px"}} type="submit">
+          <Button className="btn-post" style={{backgroundColor:"#fc96d0", border:"#fc96d0", marginTop:"20px", fontFamily: 'Rubik Bubbles'}} type="submit">
             Post to the hub!
           </Button>
         </Form>

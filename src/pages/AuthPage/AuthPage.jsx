@@ -15,7 +15,7 @@ export default class AuthPage extends React.Component {
       <main className="AuthPage">
         <div>
           <h3 onClick={() => this.setState({ showLogin: !this.state.showLogin })}>
-            {this.state.showLogin ? <Button style={{backgroundColor:"#bf456d", border:"#bf456d"}}>SIGN UP</Button> : <Button style={{backgroundColor:"#bf456d", border:"#bf456d"}}>LOG IN</Button>}
+            {this.state.showLogin ? <Button style={{backgroundColor:"#fc96d0", border:"#fc96d0", fontFamily: 'Rubik Bubbles', marginLeft:"68px", marginTop:'10px'}}>CLICK HERE TO <span style={{color:"#7085ce", fontFamily: 'Rubik Bubbles'}}>SIGN UP</span></Button> : <Button style={{backgroundColor:"#fc96d0", border:"#fc96d0", fontFamily: 'Rubik Bubbles', marginLeft:"68px", marginTop:'10px'}}>CLICK HERE TO <span style={{color:"#7085ce", fontFamily: 'Rubik Bubbles'}}>LOG IN</span></Button>}
           </h3>
         </div>
         {/* Another ternary operator! */}

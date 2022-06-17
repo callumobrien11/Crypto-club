@@ -17,12 +17,14 @@ export default class CryptoExchange extends Component {
         this.setState({ data: data });
       });
   };
+ 
 
   componentDidMount() {
     this.getExchanges();
   }
 
   render() {
+
     return (
       <main className="exchangeTable">
         <Table striped bordered hover>
@@ -41,11 +43,11 @@ export default class CryptoExchange extends Component {
               <tbody>
                 <tr>
                   <td>{exchange.rank}</td>
-                  <td><img className="image" src={exchange.iconUrl}></img>{exchange.name}</td>
-                  <td>{exchange.price}</td>
-                  <td>{exchange.btcPrice}</td>
+                  <td><img className="image" src={exchange.iconUrl}></img>  {exchange.name}</td>
+                  <td>${exchange.price}</td>
+                  <td>${exchange.btcPrice}</td>
                   <td>{exchange.numberOfMarkets}</td>
-                  <td>{exchange["24hVolume"]}</td>
+                  <td>${exchange["24hVolume"]}</td>
                 </tr>
               </tbody>
             ))

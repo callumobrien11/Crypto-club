@@ -19,7 +19,7 @@ export default class Hub extends Component {
     return (
       <main>
         {this.state.posts.map((post) => (
-          <Card border="dark">
+          <Card style={{borderRadius:"10px", margin:"10px 10px 1px 10px"}}>
             <Card.Header>{post.createdBy?.username}</Card.Header>
             <Card.Body>
               <blockquote className="blockquote mb-0">

@@ -32,14 +32,14 @@ export default class LiveNews extends Component {
         <Row xs={1} md={2} className="g-4 newsCards">
         {this.state.news.feed.length ? (
           this.state.news.feed.map((article) => (
-            <Card style={{ width: "30rem" }}>
+            <Card style={{ width: "30rem", marginTop:"17px", marginBottom:"-20px" }}>
               <Card.Img variant="top" src={article.banner_image} />
               <Card.Body>
                 <Card.Title>{article.title}</Card.Title>
                 <Card.Text>
                   <span style={{fontWeight:'bold'}}>{article.summary}</span>
                 </Card.Text>
-                <Button variant="primary" href={article.url}>See full Article</Button>
+                <Button style={{backgroundColor:"#fc96d0", border:"#fc96d0", marginTop:"20px", fontFamily: 'Rubik Bubbles'}} href={article.url}>See full Article</Button>
               </Card.Body>
             </Card>
           ))

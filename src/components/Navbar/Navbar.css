@@ -10,7 +10,6 @@
 .logo {
     font-size: 40px;
     font-weight: bold;
-    color: #ddc414;
 }
 
 .navbar-logo {
@@ -19,6 +18,7 @@
     /* margin-left: -60px;
     margin-right: -400px; */
     cursor: pointer;
+    
 }
 
 .nav-menu {
@@ -36,10 +36,11 @@
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    font-family: 'Rubik Bubbles';
 }
 
 .nav-links:hover {
-    background-color: #bf456d;
+    background-color: #fc96d0;
     border-radius: 50px;
     transition: all 0.5s ease-out;
     color: #fff;
@@ -50,7 +51,7 @@
     text-decoration: none;
     color: #fff;
     padding: 8px 20px;
-    background-color: #bf456d;
+    background-color: #fc96d0;
     border-radius: 50px;
     font-weight: bold;
     outline: none;
@@ -62,6 +63,6 @@
     transition: all 0.4s ease-out;
     color: #fff;
     font-weight: bold;
-    background:#ddc414;
+    background: #ee6e73;
     transition: 250ms;
 }
