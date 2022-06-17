@@ -27,6 +27,7 @@ export default class CryptoExchange extends Component {
 
     return (
       <main className="exchangeTable">
+        
         <Table striped bordered hover>
           <thead>
             <tr>

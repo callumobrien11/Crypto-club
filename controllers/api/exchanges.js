@@ -30,14 +30,3 @@ async function getExchanges(req, res) {
 }
 
 
-
-
-
-// console.log(req.params.tickers)
-    
-    // const response = await fetch (
-    //     'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest&apikey=069ac323-7aa4-448f-82db-28a6bb7ddc14'
-    // ) 
-    // const result = await response.json()
-    // res.json(result)
-    // return result
