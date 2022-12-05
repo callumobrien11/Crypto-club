@@ -21,7 +21,6 @@ mongoose
 bootstap
 express
 
-[Deployed app here](https://crypto-club-project4.herokuapp.com) 
 
 ICEBOX: {
 Sort posts by catagory
